@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: transparent;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar ul li.first-item {
+  position: absolute;
+  left: 0;
+  padding-left: 10rem;
+}
+.navbar ul li.first-item::after {
+  position: relative;
+}
+.navbar ul li {
+  list-style: none;
+  position: relative;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.navbar ul li::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 90%;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  transition: transform 0.6s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.navbar ul li:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navbar.scrolled {
+  position: fixed;
+  background-color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+#resultados {
+  padding-top: 5rem;
+  background-color: lightgrey;
+}
+/* Parte dos formulários */
+.formResultado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  gap: 20px;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+
+.textoForm {
+  word-wrap: break-word;
+  max-width: 50%;
+}
+
+.imgResultado {
+  max-width: 50%;
+}
